@@ -4,24 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frogger: Travessia do Pântano</title>
+    <meta name="description" content="Jogo Frogger 8-bit: guie o sapo pela estrada movimentada até o pântano!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="app">
+
       <header class="game-header">
-        <h1>Frogger: <span>Travessia do Pântano</span></h1>
-        <p>Use <b>WASD</b> ou <b>Setas</b> para guiar o sapo em segurança!</p>
+        <h1>FROGGER</h1>
+        <p class="subtitle">★ TRAVESSIA DO PÂNTANO ★</p>
       </header>
-      <main class="game-container">
-        <canvas id="gameCanvas" width="600" height="600"></canvas>
-      </main>
-      <div id="uiOverlay" class="ui-overlay hidden">
-          <h2 id="uiTitle">Game Over</h2>
-          <p id="uiMessage">Você foi esmagado!</p>
-          <button id="restartBtn">Tentar Novamente</button>
+
+      <div class="hud">
+        <div class="hud-item">
+          <div class="hud-label">SCORE</div>
+          <div id="scoreDisplay" class="hud-value score-val">000000</div>
+        </div>
+        <div class="hud-item hud-center">
+          <div class="hud-label">CONTROLES</div>
+          <div class="hud-value ctrl-hint">WASD / ↑ ↓ ← →</div>
+        </div>
+        <div class="hud-item hud-right">
+          <div class="hud-label">VIDAS</div>
+          <div id="livesDisplay" class="hud-value">🐸 🐸 🐸</div>
+        </div>
       </div>
+
+      <main class="game-wrapper">
+        <canvas id="gameCanvas" width="600" height="600"></canvas>
+        <div class="crt-overlay" aria-hidden="true"></div>
+      </main>
+
+      <div id="uiOverlay" class="ui-overlay hidden">
+        <div class="pixel-box">
+          <h2 id="uiTitle">GAME OVER</h2>
+          <p id="uiMessage">VOCÊ FOI ESMAGADO!</p>
+          <button id="restartBtn">▶ JOGAR NOVAMENTE</button>
+        </div>
+      </div>
+
     </div>
     <script type="module" src="/main.js"></script>
   </body>
