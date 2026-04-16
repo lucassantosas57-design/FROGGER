@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frogger: Travessia do Pântano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <header class="game-header">
+        <h1>Frogger: <span>Travessia do Pântano</span></h1>
+        <p>Use <b>WASD</b> ou <b>Setas</b> para guiar o sapo em segurança!</p>
+      </header>
+      <main class="game-container">
+        <canvas id="gameCanvas" width="600" height="600"></canvas>
+      </main>
+      <div id="uiOverlay" class="ui-overlay hidden">
+          <h2 id="uiTitle">Game Over</h2>
+          <p id="uiMessage">Você foi esmagado!</p>
+          <button id="restartBtn">Tentar Novamente</button>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
