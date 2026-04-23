@@ -2,10 +2,9 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // Se o repositório for https://usuario.github.io/FROGGER/
-  // defina base: '/FROGGER/'
-  // Se for um repositório de usuário (usuario.github.io), use base: '/'
-  base: '/FROGGER/',
+  // base: './' garante que os caminhos dos arquivos gerados sejam relativos,
+  // funcionando em qualquer nome de repositório no GitHub Pages.
+  base: './',
   
   build: {
     outDir: 'dist',
